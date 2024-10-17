@@ -1,1 +1,18 @@
 services:
+  app:
+    build:
+      context: .  # Uses the Dockerfile in the current directory
+      dockerfile: Dockerfile
+    container_name: springboot-firebase-app
+    ports:
+      - "8080:8080"  # Maps port 8080 of the container to port 8080 of the host
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/concurrente-umbrella-firebase-adminsdk-wub2g-ffa07f0960.json
+    volumes:
+      - ./src/main/resources/concurrente-umbrella-firebase-adminsdk-wub2g-ffa07f0960.json:/app/firebase-key.json  # Ensures access to the credentials file
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
