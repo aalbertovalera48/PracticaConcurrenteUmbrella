@@ -14,6 +14,6 @@ public class LoggingService {
     }
 
     public void logError(String message, Throwable throwable) {
-        logger.error(message, throwable);
+        //logger.error(message, throwable);
     }
 }

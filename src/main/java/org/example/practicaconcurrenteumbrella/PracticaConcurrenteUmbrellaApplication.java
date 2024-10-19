@@ -18,14 +18,13 @@ public class PracticaConcurrenteUmbrellaApplication {
     }
 
     private static void initializeFirebase() {
-        // Verificar si Firebase ya está inicializado
         if (FirebaseApp.getApps().isEmpty()) {
             try {
                 FileInputStream serviceAccount = new FileInputStream("src/main/resources/concurrente-umbrella-firebase-adminsdk-wub2g-ffa07f0960.json");
 
                 FirebaseOptions options = new FirebaseOptions.Builder()
                         .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                        .setDatabaseUrl("https://concurrente-umbrella-default-rtdb.firebaseio.com") // Reemplaza con tu URL
+                        .setDatabaseUrl("https://concurrente-umbrella-default-rtdb.firebaseio.com")
                         .build();
 
                 FirebaseApp.initializeApp(options);
@@ -37,5 +36,4 @@ public class PracticaConcurrenteUmbrellaApplication {
             System.out.println("Firebase is already initialized.");
         }
     }
-
 }
