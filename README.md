@@ -117,4 +117,4 @@ This project is a Spring Boot application that integrates with Firebase to manag
 
 URL: https://github.com/aalbertovalera48/PracticaConcurrenteUmbrella.git
 
-URL DATABASE: 
+URL DATABASE: https://concurrente-umbrella-default-rtdb.firebaseio.com/
