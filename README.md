@@ -1,5 +1,7 @@
 # PracticaConcurrenteUmbrella
 
+Hecho por: Alberto Valera, Inés Elena Gómez, Mario Serrano
+
 This project is a Spring Boot application that integrates with Firebase to manage biological data. It includes various services and configurations to handle CSV data, asynchronous tasks, and Firebase interactions.
 
 ## Project Structure
